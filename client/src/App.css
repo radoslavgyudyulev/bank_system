@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+}
+
+.RaisedButton {
+  text-align: center;
+}
+
+.account {
+  text-align: center;
+}
+
+
+.account-wrapper {
+  border: 2px solid #c2c9d3;
+  height: 60%;
+  margin: auto;
+  width: 33%;
+  padding: 10px;
+  background-color: #dcdfe5;
+  text-align: center;
+}
+.account-wrapper > input {
+  background-color: bisque;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 250px;
+  height: 30px;
+  font-size: 25px;
+}
