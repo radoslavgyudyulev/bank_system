@@ -5,13 +5,11 @@ const favicon = require('serve-favicon');
 const path = require('path')
 
 const base64 = require('base-64');
-const axios = require('axios')
 
 
 // Importing config file ...
 const config = require('./config/config')
-const request = require('ajax-request')
-const btoa = require('btoa')
+
 
 const app = express()
 
@@ -81,21 +79,6 @@ app.get('/request', (req, res) => {
   
 // })
 
-// app.get('/request', catchAsync(async (req, res) => {
-//     if (!req.query.code) throw new Error('NoCodeProvided')
-//     const code = req.query.code
-//     const creds = base64.encode(`${config.key}:${config.key}`)
-//     const redirect = 'https://lfwork.herokuapp.com/auth'
-//     const response = await fetch(`https://api-sandbox.fintecture.com/oauth/accesstoken?grant_type=authorization_code&code=${code}&redirect_uri=${redirect}`,
-//       {
-//         method: 'POST',
-//         headers: {
-//           Authorization: `Basic ${creds}`,
-//         },
-//       });
-//     const json = await response.json();
-//     res.redirect(`/?token=${json.access_token}`);
-//   }));
 
 app.get('/', (req, res) => {
     res.send('work')
